@@ -1,0 +1,21 @@
+name: Theme support
+description: A problem with the Caliper theme
+labels: [support]
+body:
+  - type: input
+    id: store
+    attributes:
+      label: Store URL
+      placeholder: your-store.myshopify.com
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is happening?
+      description: The page, the steps to reproduce and what you expected. Add screenshots by dragging them here.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: Never include passwords or staff account details. We reply within one business day, Monday to Friday.
