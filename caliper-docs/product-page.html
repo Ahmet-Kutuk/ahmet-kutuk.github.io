@@ -43,7 +43,7 @@
 <div class="layout">
   <aside class="sidebar" id="Sidebar" aria-label="Documentation navigation">
     <div class="sidebar__head"><span>Menu</span><button type="button" class="icon-button" data-nav-close aria-label="Close navigation"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
-    <nav class="nav" aria-label="Documentation"><p class="nav__group">Get started</p><ul role="list"><li><a href="index.html">Overview</a></li><li><a href="install.html">Install and presets</a></li><li><a href="setup.html">Quick setup</a></li><li><a href="content.html">Sample content</a></li></ul><p class="nav__group">Store setup</p><ul role="list"><li><a href="product-data.html">Product data</a></li><li><a href="filters.html">Filters and search</a></li><li><a href="navigation.html">Menus, header and footer</a></li><li><a href="design.html">Colors, type and motion</a></li></ul><p class="nav__group">Pages</p><ul role="list"><li><a href="home-page.html">Home page</a></li><li><a href="collections.html">Collection pages</a></li><li><a href="product-page.html" aria-current="page">Product page</a></li><li><a href="cart.html">Cart and checkout</a></li></ul><p class="nav__group">Selling</p><ul role="list"><li><a href="b2b.html">B2B and bulk ordering</a></li><li><a href="marketing.html">Pop-ups, brands and stores</a></li><li><a href="languages.html">Languages and markets</a></li></ul><p class="nav__group">Reference</p><ul role="list"><li><a href="settings.html">Theme settings</a></li><li><a href="sections.html">Sections and blocks</a></li></ul><p class="nav__group">Help</p><ul role="list"><li><a href="faq.html">FAQ and troubleshooting</a></li><li><a href="compare.html">Without apps</a></li><li><a href="changelog.html">Release notes</a></li><li><a href="support.html">Support</a></li></ul></nav>
+    <nav class="nav" aria-label="Documentation"><p class="nav__group">Get started</p><ul role="list"><li><a href="index.html">Overview</a></li><li><a href="install.html">Install and presets</a></li><li><a href="setup.html">Quick setup</a></li><li><a href="content.html">Sample content</a></li><li><a href="switching.html">Switching themes</a></li></ul><p class="nav__group">Store setup</p><ul role="list"><li><a href="product-data.html">Product data</a></li><li><a href="filters.html">Filters and search</a></li><li><a href="navigation.html">Menus, header and footer</a></li><li><a href="design.html">Colors, type and motion</a></li></ul><p class="nav__group">Pages</p><ul role="list"><li><a href="home-page.html">Home page</a></li><li><a href="collections.html">Collection pages</a></li><li><a href="product-page.html" aria-current="page">Product page</a></li><li><a href="cart.html">Cart and checkout</a></li></ul><p class="nav__group">Selling</p><ul role="list"><li><a href="b2b.html">B2B and bulk ordering</a></li><li><a href="marketing.html">Pop-ups, brands and stores</a></li><li><a href="languages.html">Languages and markets</a></li></ul><p class="nav__group">Reference</p><ul role="list"><li><a href="settings.html">Theme settings</a></li><li><a href="sections.html">Sections and blocks</a></li><li><a href="developers.html">For developers</a></li></ul><p class="nav__group">Help</p><ul role="list"><li><a href="faq.html">FAQ and troubleshooting</a></li><li><a href="compare.html">Without apps</a></li><li><a href="changelog.html">Release notes</a></li><li><a href="support.html">Support</a></li><li><a href="known-issues.html">Known issues</a></li><li><a href="roadmap.html">Roadmap</a></li><li><a href="accessibility.html">Accessibility</a></li></ul></nav>
   </aside>
   <main class="main" id="content" tabindex="-1">
     <article class="article">
@@ -53,6 +53,7 @@
 <figure class="shot"><a href="img/product.webp" class="shot__link" data-zoom><img src="img/product.webp" alt="Product page" loading="lazy" decoding="async"></a><figcaption>Size headline, part number chips, variant cards with price and stock, and the buy area.</figcaption></figure>
 <h2 id="gallery"><a class="anchor" href="#gallery" aria-label="Link to this section">#</a>Gallery</h2>
 <p><strong>Gallery layout</strong> sets thumbnails beside or below the main picture, a stacked column of all pictures, or a two-column grid. On desktop the picture magnifies under the pointer; the full screen view zooms and swipes; phones get a swipe row with dots.</p>
+<p><strong>Media hotspot</strong> blocks put pins with a short note on a photo ("Lever handle: quarter turn, lockable"). Pick the photo by its number and place the pin with the two position sliders.</p>
 <h2 id="buy-area-blocks"><a class="anchor" href="#buy-area-blocks" aria-label="Link to this section">#</a>Buy area blocks</h2>
 <figure class="shot"><a href="img/product-buy.webp" class="shot__link" data-zoom><img src="img/product-buy.webp" alt="Buy area" loading="lazy" decoding="async"></a><figcaption>Variant cards with price and stock, the stock bar, the buy box with a live total, dispatch time and Share and print.</figcaption></figure>
 <div class="table" role="region" aria-label="Table" tabindex="0"><table><thead><tr><th scope="col">Block</th><th scope="col">What it shows</th></tr></thead><tbody>
@@ -65,8 +66,9 @@
 <tr><td><strong>Size chart</strong></td><td>A link that opens a page in a dialog. A page in <code>caliper.size_chart</code> on the product overrides the one chosen in the block.</td></tr>
 <tr><td><strong>Buy buttons</strong></td><td>Quantity, add to cart and the dynamic checkout button.</td></tr>
 <tr><td><strong>Pickup availability</strong></td><td>Where the variant can be picked up today.</td></tr>
-<tr><td><strong>Dispatch time</strong></td><td>"Order in the next 2 h and it ships today", from your cutoff time.</td></tr>
-<tr><td><strong>In the box</strong>, <strong>Trust icons</strong>, <strong>Payment icons</strong>, <strong>Ask an expert</strong></td><td>What is included, four promises, accepted payments and a contact card.</td></tr>
+<tr><td><strong>Dispatch time</strong></td><td>"Order in the next 2 h and it ships today", from your cutoff time and working days. List dates with no dispatch in <strong>Holidays</strong> (<code>2026-12-25, 2027-01-01</code>) and the promise skips them.</td></tr>
+<tr><td><strong>In the box</strong>, <strong>Trust icons</strong>, <strong>Payment icons</strong>, <strong>Ask an expert</strong></td><td>What is included, four promises, accepted payments and a contact card. Trust icons can also link to your shipping and returns policies.</td></tr>
+<tr><td><strong>Certifications</strong></td><td>The <code>caliper.certifications</code> list (UL listed, CE, RoHS) as marks written out.</td></tr>
 <tr><td><strong>Back in stock request</strong></td><td>Appears when the variant is sold out and arrives as a contact form email.</td></tr>
 <tr><td><strong>Feature scores</strong></td><td>Bars from <code>caliper.ratings</code>.</td></tr>
 <tr><td><strong>Share and print</strong></td><td>Copy link, email, the phone's share sheet and <strong>Print spec sheet</strong>.</td></tr>
@@ -74,7 +76,8 @@
 </tbody></table></div>
 <h2 id="panels"><a class="anchor" href="#panels" aria-label="Link to this section">#</a>Panels</h2>
 <div class="table" role="region" aria-label="Table" tabindex="0"><table><thead><tr><th scope="col">Block</th><th scope="col">What it shows</th></tr></thead><tbody>
-<tr><td><strong>Specifications</strong></td><td>Variant and product specifications as a table.</td></tr>
+<tr><td><strong>Specifications</strong></td><td>Variant and product specifications as a table. With <strong>Millimetre and inch switch</strong> on, buyers can show lengths in either unit; pipe and thread sizes stay as written.</td></tr>
+<tr><td><strong>Installation steps</strong></td><td>Numbered steps from <code>caliper.install_steps</code> (one per line) or the block, with the time and difficulty.</td></tr>
 <tr><td><strong>Compatibility</strong></td><td>The <code>caliper.fitment</code> list with a check field. Vehicles in My garage are checked at once, with a tick or a warning, and a vehicle typed with its year can be saved.</td></tr>
 <tr><td><strong>Documents</strong></td><td>Files from <code>caliper.documents</code> with type, size and <strong>Preview</strong> for PDFs and images.</td></tr>
 <tr><td><strong>Description</strong>, <strong>Collapsible content</strong></td><td>The product description and your own folded text.</td></tr>
@@ -83,6 +86,10 @@
 <tr><td><strong>Quote request</strong></td><td>A quote form for quantities, sent with the product and SKU.</td></tr>
 </tbody></table></div>
 <p><strong>Show section tabs</strong> adds a slim bar of links to the panels the page has.</p>
+<h2 id="templates-for-different-products"><a class="anchor" href="#templates-for-different-products" aria-label="Link to this section">#</a>Templates for different products</h2>
+<p>Assign a template to a product in Shopify admin (<strong>Theme template</strong> on the product page):</p>
+<ul><li><strong>kit</strong>: what is in the box and the parts that go with it come right after the buy buttons.</li><li><strong>technical</strong>: certifications, specifications and documents lead, buying follows.</li><li><strong>quick-order</strong>: every size of the product in one table with a quantity on each row.</li></ul>
+<p><strong>Previous and next product links</strong> (section setting) appear beside the breadcrumbs when the product was opened from a collection.</p>
 <h2 id="pre-order"><a class="anchor" href="#pre-order" aria-label="Link to this section">#</a>Pre-order</h2>
 <p>Variants that track inventory and keep selling at zero stock say <strong>Pre-order</strong> on the button (turn this on in <span class="path"><span>Theme settings</span><span class="path__sep" aria-hidden="true"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Product cards</span></span>). With a date in <code>caliper.ships_by</code>, the stock line says "ships by" that date.</p>
 <h2 id="print-spec-sheet"><a class="anchor" href="#print-spec-sheet" aria-label="Link to this section">#</a>Print spec sheet</h2>
@@ -92,12 +99,12 @@
       <nav class="pager" aria-label="Previous and next page"><a class="pager__link" href="collections.html" rel="prev"><span class="pager__dir">Previous</span><span class="pager__title">Collection pages</span></a><a class="pager__link pager__link--next" href="cart.html" rel="next"><span class="pager__dir">Next</span><span class="pager__title">Cart and checkout</span></a></nav>
     </article>
   </main>
-  <aside class="toc" aria-label="On this page"><p class="toc__title">On this page</p><ol role="list"><li class="toc__l2"><a href="#gallery">Gallery</a></li><li class="toc__l2"><a href="#buy-area-blocks">Buy area blocks</a></li><li class="toc__l2"><a href="#panels">Panels</a></li><li class="toc__l2"><a href="#pre-order">Pre-order</a></li><li class="toc__l2"><a href="#print-spec-sheet">Print spec sheet</a></li><li class="toc__l2"><a href="#sticky-buy-bar">Sticky buy bar</a></li></ol></aside>
+  <aside class="toc" aria-label="On this page"><p class="toc__title">On this page</p><ol role="list"><li class="toc__l2"><a href="#gallery">Gallery</a></li><li class="toc__l2"><a href="#buy-area-blocks">Buy area blocks</a></li><li class="toc__l2"><a href="#panels">Panels</a></li><li class="toc__l2"><a href="#templates-for-different-products">Templates for different products</a></li><li class="toc__l2"><a href="#pre-order">Pre-order</a></li><li class="toc__l2"><a href="#print-spec-sheet">Print spec sheet</a></li><li class="toc__l2"><a href="#sticky-buy-bar">Sticky buy bar</a></li></ol></aside>
 </div>
 <footer class="foot">
   <div class="foot__inner">
     <span>Caliper theme for Shopify · v1.0.0</span>
-    <span>Updated November 23, 2026</span>
+    <span>Updated November 24, 2026</span>
     <a href="support.html">Get support</a>
   </div>
 </footer>
