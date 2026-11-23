@@ -99,6 +99,24 @@
     zoom.showModal();
   });
 
+  /* Support form with a form service: show progress while the service
+     answers, and the confirmation when it sends the visitor back here. */
+  const serviceForm = document.querySelector('[data-service-form]');
+  if (serviceForm) {
+    if (new URLSearchParams(window.location.search).has('sent')) {
+      const sent = document.getElementById('sent');
+      sent?.classList.add('is-shown');
+      window.addEventListener('load', () => sent?.scrollIntoView({ block: 'center' }));
+    }
+    serviceForm.addEventListener('submit', () => {
+      const button = serviceForm.querySelector('button[type="submit"]');
+      if (!button) return;
+      button.disabled = true;
+      button.setAttribute('aria-busy', 'true');
+      button.textContent = 'Sending…';
+    });
+  }
+
   /* Support form without a form service: opens a prefilled request. */
   document.querySelector('[data-issue-form]')?.addEventListener('submit', (event) => {
     event.preventDefault();
