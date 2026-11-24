@@ -1,5 +1,5 @@
 /*
-  Caliper documentation: search (/ or Ctrl K), the "On this page" marker,
+  Vernier documentation: search (/ or Ctrl K), the "On this page" marker,
   the phone menu, light and dark, copy buttons and screenshot zoom.
 */
 (function () {
