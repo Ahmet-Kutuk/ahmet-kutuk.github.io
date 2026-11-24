@@ -1344,7 +1344,7 @@ textarea {
   opacity: 0;
 }
 
-/* Shown after FormSubmit sends the visitor back to support.html#sent */
+/* Shown when the support script confirms the request */
 .form__sent {
   display: none;
   margin: 0;
@@ -1358,6 +1358,20 @@ textarea {
 .form__sent:target,
 .form__sent.is-shown {
   display: block;
+}
+
+/* A request that could not be sent: what to do next */
+.form__error {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border-left: 3px solid #c2410c;
+  background: color-mix(in srgb, #c2410c 10%, transparent);
+  color: var(--ink);
+}
+
+.form__error[hidden] {
+  display: none;
 }
 
 .button[aria-busy='true'] {

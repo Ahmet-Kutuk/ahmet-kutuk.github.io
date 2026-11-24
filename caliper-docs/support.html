@@ -50,13 +50,13 @@
       <p class="crumbs">Help</p>
       <h1>Theme support</h1>
 <p class="lead">Most answers are already in these docs: press <code>/</code> to search settings, sections and guides. If something is still unclear or broken, send a request below.</p>
-<form class="form" action="https://formsubmit.co/e3d62f44db376a70c3abb59319021c6f" method="post" enctype="multipart/form-data" data-service-form>
+<form class="form" action="https://script.google.com/macros/s/AKfycbz-9McoqMQ1rwWptgcOA65LelIJeHKiRTFtPHWsyiywKmFHzhnAqBnq1aczXyo8SdyQCA/exec" method="post" data-script-form novalidate>
   <input type="hidden" name="theme" value="Caliper">
   <div class="field-row">
     <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
     <div class="field"><label for="store">Store URL</label><input id="store" name="store_url" inputmode="url" placeholder="your-store.myshopify.com" required></div>
   </div>
-  <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div><div class="field"><label for="file">Screenshot or file <span class="hint">optional</span></label><input id="file" name="attachment" type="file" accept="image/*,.pdf,.zip"></div><input type="hidden" name="_subject" value="Caliper support request"><input type="hidden" name="_autoresponse" value="Thanks, we have your Caliper support request. We reply within one business day, Monday to Friday; problems that stop checkout or break a page are answered first. If you have not yet, reply to this email with your store URL, the page where it happens and a screenshot. Please never send passwords or staff account details: if we need access, we send a collaborator request."><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://ahmet-kutuk.github.io/caliper-docs/support.html?sent=1"><input type="text" name="_honey" class="form__honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div><div class="field"><label for="file">Screenshot or file <span class="hint">optional, up to 10 MB: image, PDF or ZIP</span></label><input id="file" name="attachment" type="file" accept="image/*,.pdf,.zip"></div><input type="text" name="_honey" class="form__honey" tabindex="-1" autocomplete="off" aria-hidden="true">
   <div class="field"><label for="topic">Topic</label>
     <select id="topic" name="topic">
       <option>Setup and settings</option><option>Product data and filters</option><option>Something looks wrong</option><option>Something does not work</option><option>Other</option>
@@ -64,7 +64,7 @@
   </div>
   <div class="field"><label for="problem">What is happening?</label><textarea id="problem" name="problem" required placeholder="The page, the steps to reproduce and what you expected"></textarea></div>
   <button type="submit" class="button">Send request <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11.5 5.5L16 10l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-  <p class="form__note">After you send, a short anti-spam check may open; then you come back here and get a confirmation by email. Do not include passwords or staff account details.</p><p class="form__sent" id="sent" role="status">Thanks, your request was sent. Check your inbox for the confirmation.</p>
+  <p class="form__note">You get a confirmation email with your request number right away. Do not include passwords or staff account details.</p><p class="form__error" role="alert" tabindex="-1" data-form-error hidden></p><p class="form__sent" id="sent" role="status" data-form-sent></p><noscript><p class="form__note">This form needs JavaScript. You can also <a href="https://github.com/Ahmet-Kutuk/ahmet-kutuk.github.io/issues/new?labels=support">open a request on GitHub</a>.</p></noscript>
 </form>
 <h2 id="response-times"><a class="anchor" href="#response-times" aria-label="Link to this section">#</a>Response times</h2>
 <ul><li><strong>First reply</strong> within one business day, Monday to Friday. Every request gets an automatic confirmation as soon as it arrives.</li><li><strong>Bugs in the theme</strong> are fixed in the next release. Problems that stop checkout or break a page are answered first.</li></ul>

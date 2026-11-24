@@ -99,21 +99,76 @@
     zoom.showModal();
   });
 
-  /* Support form with a form service: show progress while the service
-     answers, and the confirmation when it sends the visitor back here. */
-  const serviceForm = document.querySelector('[data-service-form]');
-  if (serviceForm) {
-    if (new URLSearchParams(window.location.search).has('sent')) {
-      const sent = document.getElementById('sent');
-      sent?.classList.add('is-shown');
-      window.addEventListener('load', () => sent?.scrollIntoView({ block: 'center' }));
-    }
-    serviceForm.addEventListener('submit', () => {
-      const button = serviceForm.querySelector('button[type="submit"]');
-      if (!button) return;
+  /* Support form with the Apps Script backend: checks the fields, reads the
+     optional file as base64, posts everything as one urlencoded body and
+     shows the request number the script returns. */
+  const scriptForm = document.querySelector('[data-script-form]');
+  if (scriptForm) {
+    const opened = Date.now();
+    const button = scriptForm.querySelector('button[type="submit"]');
+    const label = button?.innerHTML;
+    const errorBox = scriptForm.querySelector('[data-form-error]');
+    const sentBox = scriptForm.querySelector('[data-form-sent]');
+    const MAX = 10 * 1024 * 1024;
+    const messages = {
+      missing_fields: 'Please fill in your name, a valid email, your store URL and what is happening.',
+      file_size: 'The file is larger than 10 MB. Attach a smaller one or send it in reply to the confirmation email.',
+      file_type: 'Attach an image, a PDF or a ZIP file.',
+      rate_limited: 'You just sent a request. Wait a minute before sending another.',
+      daily_limit: 'The form has reached its limit for today. Please open a request on GitHub instead.',
+      too_fast: 'That was quick. Please check the form and send it again.',
+      network: 'The request could not be sent. Check your connection and try again.',
+      server: 'Something went wrong on our side. Please try again in a few minutes.',
+    };
+    const showError = (code) => {
+      errorBox.textContent = messages[code] || messages.server;
+      errorBox.hidden = false;
+      errorBox.focus?.();
+    };
+    const readFile = (file) => new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(String(reader.result).split(',')[1] || '');
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+
+    scriptForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      errorBox.hidden = true;
+      if (!scriptForm.checkValidity()) {
+        showError('missing_fields');
+        scriptForm.querySelector(':invalid')?.focus();
+        return;
+      }
+      const f = new FormData(scriptForm);
+      const file = f.get('attachment');
+      f.delete('attachment');
+      if (file && file.size) {
+        if (file.size > MAX) return showError('file_size');
+        f.set('file_name', file.name);
+        f.set('file_type', file.type);
+        f.set('file_data', await readFile(file));
+      }
+      f.set('_elapsed', String(Math.round((Date.now() - opened) / 1000)));
+
       button.disabled = true;
       button.setAttribute('aria-busy', 'true');
       button.textContent = 'Sending…';
+      try {
+        const res = await fetch(scriptForm.action, { method: 'POST', body: new URLSearchParams(f) });
+        const data = await res.json();
+        if (!data.ok) throw Object.assign(new Error(data.error), { code: data.error });
+        scriptForm.reset();
+        sentBox.textContent = `Thanks, your request ${data.number || ''} was sent. Check your inbox for the confirmation; we reply within one business day.`;
+        sentBox.classList.add('is-shown');
+        sentBox.scrollIntoView({ block: 'center' });
+      } catch (err) {
+        showError(err.code || 'network');
+      } finally {
+        button.disabled = false;
+        button.removeAttribute('aria-busy');
+        button.innerHTML = label;
+      }
     });
   }
 
