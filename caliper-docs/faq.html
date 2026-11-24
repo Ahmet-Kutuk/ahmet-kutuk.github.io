@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Questions and troubleshooting · Vernier documentation</title>
+<title>Questions and troubleshooting · Toolcrib documentation</title>
 <meta name="description" content="Answers to common questions and fixes for the problems merchants run into most.">
 <link rel="canonical" href="https://ahmet-kutuk.github.io/caliper-docs/faq.html">
-<meta property="og:title" content="Questions and troubleshooting · Vernier documentation">
+<meta property="og:title" content="Questions and troubleshooting · Toolcrib documentation">
 <meta property="og:description" content="Answers to common questions and fixes for the problems merchants run into most.">
 <meta property="og:image" content="https://ahmet-kutuk.github.io/caliper-docs/img/og.jpg">
 <meta name="theme-color" content="#E9EBEE" media="(prefers-color-scheme: light)">
@@ -24,7 +24,7 @@
     <button type="button" class="icon-button top__menu" data-nav-open aria-label="Open navigation" aria-controls="Sidebar" aria-expanded="false">
       <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
     </button>
-    <a class="logo" href="index.html"><svg class="logo__mark" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="8" fill="var(--pocket)"/><rect x="7" y="7" width="14" height="14" rx="4" fill="var(--accent)"/><rect x="10" y="10" width="8" height="8" rx="2" fill="var(--pocket)"/></svg><span>Vernier</span><span class="logo__docs">Docs</span></a>
+    <a class="logo" href="index.html"><svg class="logo__mark" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="8" fill="var(--pocket)"/><rect x="7" y="7" width="14" height="14" rx="4" fill="var(--accent)"/><rect x="10" y="10" width="8" height="8" rx="2" fill="var(--pocket)"/></svg><span>Toolcrib</span><span class="logo__docs">Docs</span></a>
     <span class="version" title="Latest theme version">v1.0.0</span>
     <button type="button" class="search-button" data-search-open aria-haspopup="dialog">
       <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.6" cy="8.6" r="5.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.6 12.6l4.4 4.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -78,7 +78,7 @@
 <p>It opens once per visit, after the delay counted from your first tap, click or key press, and stays hidden for the days set after you close it. Test in a private window. In the theme editor it opens when you select its section.</p>
 <h2 id="b2b"><a class="anchor" href="#b2b" aria-label="Link to this section">#</a>B2B</h2>
 <h3 id="do-i-need-an-app-for-b2b-pricing"><a class="anchor" href="#do-i-need-an-app-for-b2b-pricing" aria-label="Link to this section">#</a>Do I need an app for B2B pricing?</h3>
-<p>No. Shopify B2B catalogs supply prices and quantity rules; Vernier shows them. Retail buyers see regular prices.</p>
+<p>No. Shopify B2B catalogs supply prices and quantity rules; Toolcrib shows them. Retail buyers see regular prices.</p>
 <h3 id="reorder-shows-sign-in"><a class="anchor" href="#reorder-shows-sign-in" aria-label="Link to this section">#</a>Reorder shows "Sign in"</h3>
 <p>Reorder lists a customer's own orders, so it needs a signed-in customer. Customer accounts must be on in <span class="path"><span>Settings</span><span class="path__sep" aria-hidden="true"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Customer accounts</span></span>.</p>
 <h2 id="updates-and-apps"><a class="anchor" href="#updates-and-apps" aria-label="Link to this section">#</a>Updates and apps</h2>
@@ -86,7 +86,7 @@
 <p>Settings and content carry over, and setting names never change between versions. Code you edit yourself is not carried over, so prefer settings, custom Liquid blocks and app blocks.</p>
 <h3 id="how-do-i-add-a-review-app"><a class="anchor" href="#how-do-i-add-a-review-app" aria-label="Link to this section">#</a>How do I add a review app?</h3>
 <p>Install it, then add its app blocks in the theme editor. Tested with Judge.me (free plan) on 2026-11-24:</p>
-<ul><li><strong>Star rating under the title:</strong> Vernier already shows stars on the product page and on cards from the rating your review app saves to the product (Shopify's standard rating metafield; Judge.me fills it). If you also add the app's own star badge to <strong>Product information</strong>, turn off <strong>Size and title › Show star rating</strong> so the stars show once.</li><li><strong>Review list:</strong> add a <strong>Custom section</strong> below <strong>Product information</strong> and put the app's review widget in it, so it runs the full width of the page. It can also go inside <strong>Product information</strong> or <strong>Featured product</strong>.</li><li><strong>Dark preset (Redline) or dark mode:</strong> review apps set their own text colors, often black. In the review widget's settings, set the text color to a light gray (for example #EDEEEF) and the lighter text to #9BA1A8, or the reviews are hard to read on the dark background.</li><li><strong>Speed:</strong> Judge.me adds about 350 KB of script to the product page; Lighthouse performance stayed at 94–96 on mobile in the test.</li></ul>
+<ul><li><strong>Star rating under the title:</strong> Toolcrib already shows stars on the product page and on cards from the rating your review app saves to the product (Shopify's standard rating metafield; Judge.me fills it). If you also add the app's own star badge to <strong>Product information</strong>, turn off <strong>Size and title › Show star rating</strong> so the stars show once.</li><li><strong>Review list:</strong> add a <strong>Custom section</strong> below <strong>Product information</strong> and put the app's review widget in it, so it runs the full width of the page. It can also go inside <strong>Product information</strong> or <strong>Featured product</strong>.</li><li><strong>Dark preset (Redline) or dark mode:</strong> review apps set their own text colors, often black. In the review widget's settings, set the text color to a light gray (for example #EDEEEF) and the lighter text to #9BA1A8, or the reviews are hard to read on the dark background.</li><li><strong>Speed:</strong> Judge.me adds about 350 KB of script to the product page; Lighthouse performance stayed at 94–96 on mobile in the test.</li></ul>
       <nav class="pager" aria-label="Previous and next page"><a class="pager__link" href="developers.html" rel="prev"><span class="pager__dir">Previous</span><span class="pager__title">For developers</span></a><a class="pager__link pager__link--next" href="compare.html" rel="next"><span class="pager__dir">Next</span><span class="pager__title">Without apps</span></a></nav>
     </article>
   </main>
@@ -94,7 +94,7 @@
 </div>
 <footer class="foot">
   <div class="foot__inner">
-    <span>Vernier theme for Shopify · v1.0.0</span>
+    <span>Toolcrib theme for Shopify · v1.0.0</span>
     <span>Updated November 24, 2026</span>
     <a href="support.html">Get support</a>
   </div>

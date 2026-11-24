@@ -1,5 +1,5 @@
 /*
-  Vernier documentation: search (/ or Ctrl K), the "On this page" marker,
+  Toolcrib documentation: search (/ or Ctrl K), the "On this page" marker,
   the phone menu, light and dark, copy buttons and screenshot zoom.
 */
 (function () {
