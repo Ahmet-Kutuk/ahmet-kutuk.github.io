@@ -53,6 +53,11 @@
 <p>The <strong>Newsletter pop-up</strong> section lives in the footer group, so it can show on every page.</p>
 <figure class="shot"><a href="img/popup.webp" class="shot__link" data-zoom><img src="img/popup.webp" alt="Newsletter pop-up" loading="lazy" decoding="async"></a><figcaption>The pop-up with an optional picture and discount code after sign-up.</figcaption></figure>
 <ul><li>It opens after the delay you set, counted from the visitor's first tap, click or key press, or when the pointer leaves the window on desktop. At most once per visit.</li><li>Closing it hides it for the number of days you choose; signing up hides it for good.</li><li>Add a <strong>Discount code</strong> (created first in <span class="path"><span>Discounts</span></span>) to show after sign-up.</li><li>It never opens on the cart or password page, or over the cart drawer.</li></ul>
+<h2 id="where-email-signups-go"><a class="anchor" href="#where-email-signups-go" aria-label="Link to this section">#</a>Where email signups go</h2>
+<p>The pop-up, the <strong>Newsletter</strong> section and the footer signup all use Shopify's own customer form. No app is needed to collect addresses.</p>
+<ol class="steps"><li>Each signup creates or updates a customer in <strong>Customers</strong> in the Shopify admin, marked as subscribed to email marketing. Pop-up signups also get the tags <code>newsletter</code> and <code>popup</code>.</li><li>To see your list, open <strong>Customers</strong> and filter by <strong>Email subscription status: Subscribed</strong>.</li><li>Send the emails yourself with <a href="https://apps.shopify.com/shopify-email" target="_blank" rel="noopener">Shopify Email</a> (free up to a monthly allowance) or any email marketing app that reads Shopify customers, such as Klaviyo or Omnisend.</li></ol>
+<p>The theme collects the address; it doesn't send emails on its own. Write the heading and text to match what you will actually send, for example new stock and offers once or twice a month. If you want automatic emails when a product is restocked or its price changes, install an app that sends them, then describe that in the pop-up text.</p>
+<p>Sold-out products have a separate <strong>Back in stock request</strong> on the product page (see <span class="path"><span>Product page</span></span>). It sends you a contact form email with the product, variant and SKU, so you can reply when the item is back, or connect a back-in-stock app instead.</p>
 <h2 id="promotion-tab"><a class="anchor" href="#promotion-tab" aria-label="Link to this section">#</a>Promotion tab</h2>
 <p>The <strong>Promotion tab</strong> section adds a small "Get 10% off" tab on the edge of the screen. It opens a card with your code, a copy button and a link. Closing it hides it for the days you set.</p>
 <h2 id="age-check"><a class="anchor" href="#age-check" aria-label="Link to this section">#</a>Age check</h2>
@@ -66,12 +71,12 @@
       <nav class="pager" aria-label="Previous and next page"><a class="pager__link" href="b2b.html" rel="prev"><span class="pager__dir">Previous</span><span class="pager__title">B2B and bulk ordering</span></a><a class="pager__link pager__link--next" href="languages.html" rel="next"><span class="pager__dir">Next</span><span class="pager__title">Languages and markets</span></a></nav>
     </article>
   </main>
-  <aside class="toc" aria-label="On this page"><p class="toc__title">On this page</p><ol role="list"><li class="toc__l2"><a href="#newsletter-pop-up">Newsletter pop-up</a></li><li class="toc__l2"><a href="#promotion-tab">Promotion tab</a></li><li class="toc__l2"><a href="#age-check">Age check</a></li><li class="toc__l2"><a href="#brands">Brands</a></li><li class="toc__l2"><a href="#store-locator">Store locator</a></li></ol></aside>
+  <aside class="toc" aria-label="On this page"><p class="toc__title">On this page</p><ol role="list"><li class="toc__l2"><a href="#newsletter-pop-up">Newsletter pop-up</a></li><li class="toc__l2"><a href="#where-email-signups-go">Where email signups go</a></li><li class="toc__l2"><a href="#promotion-tab">Promotion tab</a></li><li class="toc__l2"><a href="#age-check">Age check</a></li><li class="toc__l2"><a href="#brands">Brands</a></li><li class="toc__l2"><a href="#store-locator">Store locator</a></li></ol></aside>
 </div>
 <footer class="foot">
   <div class="foot__inner">
     <span>Toolcrib theme for Shopify · v1.0.0</span>
-    <span>Updated November 24, 2026</span>
+    <span>Updated November 25, 2026</span>
     <a href="support.html">Get support</a>
   </div>
 </footer>
